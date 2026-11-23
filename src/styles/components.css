@@ -1,0 +1,166 @@
+/* ─── Shared animation helper ───────────────────────────────── */
+
+.rise {
+  opacity: 0;
+  animation: rise 1.1s var(--ease-apple) forwards;
+}
+
+/* ─── Back button ───────────────────────────────────────────── */
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.back-btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--foreground);
+  transition: background-color 0.3s, color 0.3s;
+  flex-shrink: 0;
+}
+
+.back-btn:hover .back-btn__icon {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+/* ─── Hub arrow buttons ─────────────────────────────────────── */
+
+.hub-arrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.hub-arrow__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hub-arrow__inner--col         { flex-direction: column; }
+.hub-arrow__inner--col-reverse { flex-direction: column-reverse; }
+.hub-arrow__inner--row-reverse { flex-direction: row-reverse; }
+
+.hub-arrow__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--foreground);
+  flex-shrink: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hub-arrow:hover .hub-arrow__circle {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.hub-arrow__circle--nudge-x {
+  animation: nudge-x 2s ease-in-out infinite;
+}
+
+.hub-arrow__label {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hub-arrow__label { display: inline; }
+}
+
+/* ─── Section scroll areas ──────────────────────────────────── */
+
+.scroll-area {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* ─── Skill tags ────────────────────────────────────────────── */
+
+.skill-tag {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* ─── Contact icon circle ───────────────────────────────────── */
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-link:hover .contact-icon {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+/* ─── CV download button ────────────────────────────────────── */
+
+.cv-btn {
+  display: inline-block;
+  border-radius: 999px;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: opacity 0.3s;
+}
+
+.cv-btn:hover {
+  opacity: 0.8;
+}
+
+/* ─── Experience bullet marker ──────────────────────────────── */
+
+.bullet-line {
+  margin-top: 0.625rem;
+  height: 1px;
+  width: 1rem;
+  flex-shrink: 0;
+  background-color: var(--foreground);
+}
+
+/* ─── Projects list ─────────────────────────────────────────── */
+
+.project-item {
+  display: grid;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-block: 2rem;
+  transition: padding-left 0.5s;
+}
+
+.project-item:hover {
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-item {
+    grid-template-columns: 80px 1fr 1.2fr;
+    gap: 2rem;
+  }
+}

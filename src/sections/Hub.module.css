@@ -1,0 +1,78 @@
+.hub {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
+}
+
+/* ── Botão de cima ── */
+.top {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+
+/* ── Botão da esquerda ── */
+.left {
+  grid-row: 2;
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  padding-inline: 1.5rem;
+}
+
+/* ── Conteúdo central ── */
+.center {
+  grid-row: 2;
+  grid-column: 2;
+  text-align: center;
+  overflow: hidden;
+  padding-inline: 1rem;
+}
+
+/* ── Botão da direita ── */
+.right {
+  grid-row: 2;
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  padding-inline: 1.5rem;
+}
+
+/* ── Botão de baixo ── */
+.bottom {
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+/* ── Tipografia ── */
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--muted-foreground);
+}
+
+.summary {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, min(5vh, 4vw), 3rem);
+  line-height: 1.25;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  max-width: 42rem;
+  font-weight: 400;
+}
+
+.hint {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}

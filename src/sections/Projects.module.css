@@ -1,0 +1,161 @@
+.wrapper {
+  height: 100%;
+  overflow-y: auto;
+  padding: 7rem 1.5rem 4rem;
+}
+
+@media (min-width: 768px) {
+  .wrapper { padding-inline: 4rem; }
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 64rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 400;
+}
+
+.intro {
+  margin-top: 1.5rem;
+  max-width: 36rem;
+  color: var(--muted-foreground);
+}
+
+/* ── Grid de cards ── */
+
+.grid {
+  margin-top: 3rem;
+  list-style: none;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Card ── */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 2);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.card:hover {
+  border-color: var(--foreground);
+}
+
+/* ── Thumb ── */
+
+.thumb {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: color-mix(in oklab, var(--foreground) 6%, var(--background));
+  flex-shrink: 0;
+  display: block;
+}
+
+.thumb img,
+.thumb > * {
+  transition: transform 0.4s var(--ease-apple);
+}
+
+a.thumb:hover img,
+a.thumb:hover > * {
+  transform: scale(1.03);
+}
+
+.thumbFallback {
+  width: 100%;
+  height: 100%;
+  background-color: color-mix(in oklab, var(--foreground) 8%, var(--background));
+}
+
+/* ── Body ── */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.bodyTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.index {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.year {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.tag {
+  margin-top: 0.25rem;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted-foreground);
+}
+
+.desc {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: color-mix(in oklab, var(--foreground) 75%, var(--background));
+  flex: 1;
+}
+
+.stack {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--foreground);
+  transition: opacity 0.2s;
+  align-self: flex-start;
+}
+
+.link:hover {
+  opacity: 0.6;
+}

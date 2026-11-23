@@ -1,0 +1,120 @@
+.hero {
+  position: relative;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.content {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.4rem, 1.4vh, 1.2rem);
+  padding: 6rem 1.5rem 5rem;
+  text-align: center;
+}
+
+.avatar {
+  aspect-ratio: 1;
+  width: clamp(5rem, 15vh, 10rem);
+  overflow: hidden;
+  border-radius: 999px;
+  border: 1px solid var(--foreground);
+}
+
+.avatar img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.location {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--muted-foreground);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, min(11vh, 9vw), 6.5rem);
+  line-height: 0.95;
+  font-weight: 400;
+}
+
+.name em {
+  font-style: italic;
+}
+
+.roleBlock {
+  width: 100%;
+}
+
+.role {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .role { font-size: 1.25rem; }
+}
+
+.focus {
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 42rem;
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+}
+
+@media (min-width: 640px)  { .focus { font-size: 0.75rem; } }
+@media (min-width: 768px)  { .focus { font-size: 0.875rem; } }
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2.5rem;
+  row-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .facts { column-gap: 4rem; }
+}
+
+.factValue {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .factValue { font-size: 1.875rem; }
+}
+
+.factLabel {
+  margin-top: 0.25rem;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted-foreground);
+}
+
+.nextBtn {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--muted-foreground);
+}
+
+.nextBtnIcon {
+  display: block;
+  color: var(--foreground);
+  animation: nudge-y 2s ease-in-out infinite;
+}
