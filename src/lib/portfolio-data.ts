@@ -83,12 +83,12 @@ export const experiences = [
         stack: "Node-RED · InfluxDB · Grafana · Docker/WSL",
       },
       {
-        text: "Planilha Excel com grande volume travava a análise: automatizei com Node-RED e JavaScript e transformei em dashboard no Grafana, com visualização em tempo real.",
-        stack: "Node-RED · JavaScript · Grafana",
+        text: "Planilha Excel com grande volume travava a análise: automatizei com Node-RED e JS e transformei em dashboard no Grafana, com visualização em tempo real.",
+        stack: "Node-RED · JS · Grafana",
       },
       {
         text: "Soluções sem dono de ponta a ponta: liderei design (Figma), back-end, front-end e implantação, estruturando cronogramas e validando cada etapa com o cliente — 80% de conformidade já na primeira versão.",
-        stack: "Figma · JavaScript · HTML/CSS · Low-code",
+        stack: "Figma · JS · HTML/CSS · Low-code",
       },
       {
         text: "Adoção lenta das ferramentas: conduzi o onboarding com treinamentos, materiais de apoio e suporte remoto — menos de 5 dias para adotar e 60–80% menos carga operacional.",
